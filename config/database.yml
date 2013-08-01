@@ -1,39 +1,42 @@
-# Oracle/OCI 8i, 9, 10g
-#
-# Requires Ruby/OCI8:
-#  http://rubyforge.org/projects/ruby-oci8/
-#
-# Specify your database using any valid connection syntax, such as a
-# tnsnames.ora service name, or an SQL connect string of the form:
-#
-#   //host:[port][/service name]
-#
-# By default prefetch_rows (OCI_ATTR_PREFETCH_ROWS) is set to 100. And
-# until true bind variables are supported, cursor_sharing is set by default
-# to 'similar'. Both can be changed in the configuration below; the defaults
-# are equivalent to specifying:
-#
-#  prefetch_rows: 100
-#  cursor_sharing: similar
-#
-
+# use oracle_enhanced adapter to connect oracle database
 development:
-  adapter: oracle
-  database: shop_development
-  username: shop
-  password:
+  adapter: oracle_enhanced
+  database: 192.168.1.8/orcl
+  #database: 116.236.235.154/orcl
+  #database: 114.80.138.164/orcl
+  username: "jjsc_web_production"
+  password: "jjsc_web_production"
+  #password: "3344134"
+  encoding: utf8
+  wlfp:
+    adapter: mysql2
+    database: wlfp
+    host: 116.236.235.154
+    username: wlfp
+    password: 'wlfp'
+    encoding: utf8
+    
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  adapter: oracle
-  database: shop_test
-  username: shop
-  password:
 
 production:
-  adapter: oracle
-  database: shop_production
-  username: shop
-  password:
+  adapter: oracle_enhanced
+  database: 192.168.1.8/orcl
+#  database: 192.168.100.10/orcl
+  username: "jjsc_web_production"
+  password: "jjsc_web_production"
+  encoding: utf8
+  wlfp:
+    adapter: mysql2
+    database: wlfp
+    host: 192.168.1.14
+    username: root
+    password: '3344134'
+    encoding: utf8
+
+test:
+  adapter: oracle_enhanced
+  database: 192.168.1.8/orcl
+# database: 192.168.100.10/orcl
+  username: "jjsc_web_test"
+  password: "jjsc_web_test"
+  encoding: utf8

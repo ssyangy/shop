@@ -1,0 +1,19 @@
+            <div class="cartContent"><a href="">购物车：<strong><%= @cart.shopping_cart_items.size %></strong>件，去结算&gt;</a></div>
+				<div class="cartList">
+					<ul>
+					<% @cart.shopping_cart_items.includes(:item).each do |cart_item| %>
+						<li class="fix">
+							<figure><a href=""><%= image_tag "temp/item_tiny_01.jpg" %></a></figure>
+							<div class="info">
+								<p><a href=""><%= cart_item.item.name %></a></p>
+								<p><strong><%= cart_item.item.price %></strong> x <%= cart_item.quantity %></p>
+							</div>
+						</li>
+					<% end %>
+					</ul>
+					<div class="summary">
+						<p>共<strong><%= @cart.shopping_cart_items.size %></strong>件商品</p>
+						<p>金额总计：<strong><%= @cart.total %></strong></p>
+						<a href="">去购物车结算&gt;</a>
+					</div>
+				</div>
