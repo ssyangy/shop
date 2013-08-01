@@ -10,9 +10,9 @@
 					<% index += 1%>
 					<li class='<%= index%3 == 0 ? "last" : nil %>'>
 						<dl>
-							<dt><a href=""><%= image_tag "temp/bid_item.jpg" %></a></dt>
+							<dt><%= link_to image_tag("temp/bid_item.jpg"), product %></dt>
 							<dd>
-								<p><a href=""><%= product.name %></a></p>
+								<p><%= link_to product.name, product %></p>
 								<p><strong><%= product.price %></strong></p>
 								<p class="tac"><button type="button">立即购买</button><%= link_to '加入购物车', carts_path(pid: product.id, pcount: 1), method: 'post' %></p>
 							</dd>

@@ -3,6 +3,7 @@ Shop::Application.routes.draw do
   # first created -> highest priority.
   resources :mall
   resources :carts
+  resources :products
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
