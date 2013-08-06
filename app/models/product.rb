@@ -4,6 +4,9 @@ class Product < ActiveRecord::Base
   belongs_to :m_category
   has_many :supplier_wares
   has_many :suppliers, :through => :supplier_wares
+  has_many :product_pictures                                   
+  has_one :product_picture,:order => "position asc"             
+
   validates_numericality_of :price, :greater_than => 0
   validates_presence_of :name, :price, :m_category_id
 

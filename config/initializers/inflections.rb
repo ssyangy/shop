@@ -8,8 +8,5 @@
 #   inflect.irregular 'person', 'people'
 #   inflect.uncountable %w( fish sheep )
 # end
-#
-# These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections do |inflect|
-#   inflect.acronym 'RESTful'
-# end
+Paperclip::Attachment.class_eval("def base_url;instance.base_url;end")
+Paperclip::Interpolations.class_eval("def base_url(attachment,style_name);attachment.instance.base_url;end")

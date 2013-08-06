@@ -438,618 +438,6 @@ main {
 	padding-bottom: 30px;
 }
 
-/* 列表 */
-.list .intro {
-	padding: 15px 30px 25px 30px;
-	background: #fff;
-	border: 1px solid #c9c9ca;
-}
-
-.list .intro h3 {
-	padding-bottom: 15px;
-	font-size: 16px;
-	text-align: center;
-}
-
-.list .intro dt {
-	float: left;
-}
-
-.list .intro dt table {
-	width: 460px;
-	height: 150px;
-}
-
-.list .intro dt tr:hover {
-	background: none;
-}
-
-.list .intro dt td {
-	padding: 0;
-	height: auto;
-	border: none;
-	text-align: left;
-	vertical-align: middle;
-}
-
-.list .intro dd {
-	float: right;
-	width: 440px;
-}
-
-.list .intro dd .flash {
-	width: 440px;
-	height: 132px;
-	overflow: hidden;
-}
-
-.list .intro dd .flash #flashLeftArrow,
-.list .intro dd .flash #flashRightArrow {
-	float: left;
-	padding: 51px 0;
-	width: 30px;
-	height: 30px;
-}
-
-.list .intro dd .flash .flashLeftArrow {
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	background: url(../img/sprite.png) no-repeat 0 -30px;
-}
-
-.list .intro dd .flash .flashRightArrow {
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	background: url(../img/sprite.png) no-repeat -30px -30px;
-}
-
-.list .intro dd .flash ul {
-	position: relative;
-	float: left;
-	width: 380px;
-	height: 132px;
-	overflow: hidden;
-}
-
-.list .intro dd .flash li {
-	position: absolute;
-	padding: 10px;
-	width: 360px;
-	height: 112px;
-}
-
-.list .intro dd .flash li table {
-	width: 360px;
-	height: 112px;
-}
-
-.list .intro dd .flash li tr:hover {
-	background: none;
-}
-
-.list .intro dd .flash li td {
-	padding: 0;
-	height: auto;
-	border: none;
-	text-align: left;
-	vertical-align: middle;
-}
-
-.list .intro dd .flash li td.tac {
-	text-align: center;
-}
-
-.list .intro dd .flash li td h4 {
-	padding-bottom: 5px;
-}
-
-.list .intro dd .flash li td h4 a {
-	font-size: 14px;
-	color: #c90000;
-	text-decoration: underline;
-}
-
-.list .intro dd .flash li td p {
-	font-size: 12px;
-}
-
-.list aside {
-	float: left;
-	margin-top: 10px;
-	width: 195px;
-	background: #fff;
-	border: 1px solid #c9c9ca;
-}
-
-.list aside .category li {
-	float: left;
-}
-
-.list aside .category li a {
-	display: inline-block;
-	width: 97px;
-	height: 40px;
-	line-height: 40px;
-	border-right: 1px solid #c9c9ca;
-	border-bottom: 1px solid #c9c9ca;
-	font-size: 14px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.list aside .category li a:hover {
-	background: url(bg/category_hover.png) repeat-y;
-	color: #c90000;
-}
-
-.list aside .category li.current a {
-	background: url(bg/category_current.png) repeat-y;
-	color: #fff;
-}
-
-.list aside .meeting {
-	padding: 10px 0;
-}
-
-.list aside .meeting li {
-	padding: 5px 20px;
-	width: 155px;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-}
-
-.list aside h3 {
-	padding: 3px 0;
-	background: url(bg/aside_h3.png) repeat-y center;
-	text-align: center;
-}
-
-.list aside p {
-	padding: 10px 0;
-	text-align: center;
-}
-
-.list aside .menu {
-	padding: 0 15px 10px 15px;
-}
-
-.list aside .menu li {
-	padding: 6px;
-}
-
-.list aside .menu li a:hover {
-	color: #c90000;
-}
-
-.list aside .menu li.current {
-	background: #7d3d7c;
-	font-weight: bold;
-	color: #fff;
-}
-
-.list aside .menu li.current a,
-.list aside .menu li.current a:hover {
-	color: #fff;
-}
-
-.list article {
-	float: right;
-	margin-top: 10px;
-	width: 770px;
-	background: #fff;
-	border: 1px solid #c9c9ca;
-}
-
-.list .tools {
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	background: url(bg/title.png) repeat-x;
-}
-
-.list .tools select {
-	margin: 0 10px;
-}
-
-.list .tools .icon_tools {
-	display: inline-block;
-	*margin-top: 8px;
-	margin-left: 15px;
-	width: 17px;
-	height: 13px;
-	background-image: url(../img/sprite.png);
-	background-repeat: no-repeat;
-	vertical-align: middle;
-}
-
-.list .tools .icon_pt {
-	background-position: -30px -180px;
-}
-
-.list .tools .icon_p {
-	background-position: -30px -210px;
-}
-
-.list .tools .icon_pt_act {
-	background-position: 0 -180px;
-}
-
-.list .tools .icon_p_act {
-	background-position: 0 -210px;
-}
-
-.list .tools .fl a {
-	display: inline-block;
-	margin-left: 40px;
-	padding-right: 20px;
-	background-image: url(../img/sprite.png);
-	background-repeat: no-repeat;
-}
-
-.list .tools .asce {
-	background-position: 30px -55px;
-}
-
-.list .tools .desc {
-	background-position: 30px -85px;
-}
-
-.list .tools .currentAsce {
-	background-position: 30px -115px;
-	color: #c90000;
-}
-
-.list .tools .currentDesc {
-	background-position: 30px -145px;
-	color: #c90000;
-}
-
-.list table {
-	width: 100%;
-}
-
-.list tr.even {
-	background: #f8f8f8;
-}
-
-.list tr:hover {
-	background: #faf5ff;
-}
-
-.list td {
-	padding: 0 5px;
-	height: 95px;
-	border-top: 1px solid #c5c5c5;
-	font-size: 14px;
-	text-align: center;
-}
-
-.list td.first {
-	padding-left: 15px;
-	vertical-align: middle;
-}
-
-.list td.first a {
-	display: inline-block;
-}
-
-.list td.last {
-	padding-right: 15px;
-}
-
-.list div.preview {
-	display: none;
-	position: absolute;
-	margin-left: 100px;
-	background: #fff;
-	border: 1px solid #000;
-}
-
-.list td .loading {
-	margin: 100px;
-}
-
-.list td.title {
-	text-align: left;
-}
-
-.list td.title a {
-	border-bottom: 1px solid;
-	font-size: 14px;
-	font-weight: bold;
-	color: #452946;
-}
-
-.list td time {
-	padding-left: 20px;
-	background: url(../img/sprite.png) no-repeat 0 -246px;
-}
-
-.list td a.fav {
-	*position: relative;
-	float: right;
-	margin: -32px 2px 0 0;
-	*margin: -52px 2px 0 0;
-	width: 16px;
-	height: 16px;
-	background: url(../img/sprite.png) no-repeat 0 -277px;
-}
-
-.list td a.faved {
-	background: url(../img/sprite.png) no-repeat -30px -277px;
-}
-.list .tile {
-	display: none;
-	padding: 20px 0 15px 20px;
-}
-
-.list .tile li {
-	float: left;
-	margin: 0 8px 8px 0;
-	padding: 7px;
-	width: 160px;
-	background: #f9f8f9;
-	border: 1px solid #c3c3c3;
-}
-
-.list .tile li.last {
-	margin-right: 0;
-}
-
-.list .tile li div td {
-	padding: 0;
-	width: 160px;
-	height: 160px;
-	border: none;
-	text-align: center;
-	vertical-align: middle;
-}
-
-.list .tile li p {
-	padding-top: 5px;
-	line-height: 18px;
-}
-
-.list .tile li p a {
-	display: inline-block;
-	margin: 5px 0;
-	border-bottom: 1px solid;
-	font-size: 14px;
-	font-weight: bold;
-	color: #452946;
-}
-
-.list .tile li time {
-	float: right;
-	padding-left: 20px;
-	background: url(../img/sprite.png) no-repeat 0 -246px;
-}
-
-.list td a:visited {
-	color: #954B95;
-}
-
-.list .tile a:visited {
-	color: #954B95;
-}
-
-.list .tile a.fav {
-	*position: relative;
-	float: right;
-	margin: 0;
-	*margin: -20px 0 0 0;
-	width: 16px;
-	height: 16px;
-	background: url(../img/sprite.png) no-repeat 0 -277px;
-	border-bottom: none;
-}
-
-.list .tile a.faved {
-	background: url(../img/sprite.png) no-repeat -30px -277px;
-}
-
-/* 拍卖 */
-.bid .focus {
-	padding-bottom: 20px;
-	width: 980px;
-	height: 300px;
-}
-
-.bid .status {
-	padding-bottom: 10px;
-	text-align: center;
-}
-
-.bid .status a {
-	display: inline-block;
-	padding: 0 15px;
-	height: 30px;
-	line-height: 30px;
-	background: #fff;
-	border: 1px solid #c9c9ca;
-	font-size: 14px;
-}
-
-.bid .status a.current {
-	background: url(bg/category_current.png) repeat-y;
-	color: #fff;
-}
-
-.bid .title {
-	margin-bottom: 10px;
-	height: 30px;
-	line-height: 30px;
-	background: url(bg/bid_title_line.png) no-repeat center;
-	font-size: 18px;
-	text-align: center;
-}
-
-.bid .title span {
-	padding: 0 10px;
-	background: #eeeeee;
-}
-
-.bid .bidShow {
-	margin-bottom: 15px;
-	background: #fff;
-	border: 1px solid #c9c9ca;
-}
-
-.bid .bidShow .info {
-	float: left;
-	padding: 20px;
-	width: 759px;
-	height: 138px;
-	border-bottom: 1px solid #c9c9ca;
-}
-
-.bid .bidShow .info h3 {
-	padding-bottom: 15px;
-	_padding-bottom: 12px;
-	line-height: 30px;
-	font-size: 20px;
-}
-
-.bid .bidShow .info h3 span {
-	float: right;
-	font-size: 12px;
-	font-weight: normal;
-}
-
-.bid .bidShow .info h3 span a {
-	margin-left: 20px;
-}
-
-.bid .bidShow .info .preview {
-	float: left;
-	width: 379px;
-}
-
-.bid .bidShow .info .bidview {
-	float: left;
-	width: 379px;
-}
-
-.bid .bidShow .info .name {
-	padding: 5px 0;
-	font-size: 14px;
-	border-bottom: 1px solid #c9c9ca;
-	text-align: center;
-}
-
-.bid .bidShow .info p {
-	padding: 10px 20px 5px 20px;
-	line-height: 24px;
-}
-
-.bid .bidShow .info .preview p {
-	border-right: 1px solid #c9c9ca;
-}
-
-.bid .bidShow .result {
-	float: right;
-	width: 178px;
-	height: 178px;
-	border-left: 1px solid #c9c9ca;
-	border-bottom: 1px solid #c9c9ca;
-}
-
-.bid .bidShow .result a {
-	display: inline-block;
-	width: 178px;
-	height: 178px;
-	text-align: center;
-}
-
-.bid .bidShow .result a.bigArrow {
-	padding-top: 128px;
-	height: 50px;
-	background: url(icon/big_arrow.png) no-repeat center 40px;
-}
-
-.bid .bidShow .result a.smallArrow {
-	padding-top: 38px;
-	height: 140px;
-	background: url(icon/small_arrow.png) no-repeat center 130px;
-	font-size: 18px;
-	color: #c90000;
-}
-
-.bid .bidShow ul {
-	clear: both;
-	padding: 20px 10px;
-}
-
-.bid .bidShow li {
-	_display: inline;
-	float: left;
-	margin: 0 10px;
-	width: 138px;
-	text-align: center;
-}
-
-.bid .bidShow li table {
-	width: 138px;
-	height: 138px;
-	background: url(bg/bid_table.png) repeat-x top;
-}
-
-.bid .bidShow li p {
-	padding: 5px 10px 0 10px;
-}
-
-.bid .bidShow li.bigPic {
-	width: 148px;
-}
-
-/* 关于 */
-.department li {
-	float: left;
-	margin-right: 16px;
-	padding: 20px;
-	width: 276px;
-	background: #fff;
-	box-shadow: 0 2px 3px #999;
-}
-
-.department li h3 {
-	padding-bottom: 10px;
-	font-size: 20px;
-	text-align: center;
-}
-
-.department li p {
-	padding-bottom: 10px;
-}
-
-.team li {
-	float: left;
-	margin: 0 16px 16px 0;
-	padding: 25px;
-	width: 432px;
-	background: #fff;
-	box-shadow: 0 2px 3px #999;
-}
-
-.team li dt {
-	float: left;
-	width: 180px;
-}
-
-.team li dd {
-	float: left;
-	padding-top: 20px;
-	width: 252px;
-	font-size: 14px;
-}
-
-.team li dd p {
-	padding-bottom: 10px;
-}
-
 /* 商城 */
 .shoppingCart {
 	position: absolute;
@@ -1277,4 +665,180 @@ main {
 	font-weight: bold;
 	color: #fff;
 }
+
+.shop .goodsDetail {
+	margin-bottom: 10px;
+	background: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	border-radius: 4px;
+}
+
+.shop .goodsDetail .goodsPic {
+	float: left;
+	width: 650px;
+	text-align: center;
+}
+
+.shop .goodsDetail .goodsPic table {
+	margin: 30px 25px 0 25px;
+}
+
+.shop .goodsDetail .goodsPic td {
+	width: 600px;
+	height: 400px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.shop .goodsDetail .goodsPic ul {
+	margin: 0 auto;
+	padding-bottom: 20px;
+	width: 600px;
+}
+
+.shop .goodsDetail .goodsPic li {
+	float: left;
+	padding: 10px;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+}
+
+.shop .goodsDetail .goodsPic li a {
+	display: block;
+	border: 2px solid #fff;
+}
+
+.shop .goodsDetail .goodsPic li.selected a {
+	box-shadow: inset 1px 2px 2px #ccc;
+	border: 2px solid #08c;
+	border-radius: 5px;
+}
+
+.shop .goodsDetail .goodsPic li a:hover {
+	box-shadow: inset 1px 2px 2px #ccc;
+	border: 2px solid #6cb7e3;
+	border-radius: 5px;
+}
+
+.shop .goodsDetail .goodsPic li img {
+	vertical-align: middle;
+}
+
+.shop .goodsDetail .goodsInfo {
+	float: right;
+	padding: 40px 50px;
+	width: 230px;
+	min-height: 480px;
+	_height: 480px;
+	background: url(bg/separator.png) no-repeat 0 center;
+}
+
+.shop .goodsDetail .goodsInfo h4 {
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+
+.shop .goodsDetail .goodsInfo p {
+	padding: 15px 0;
+	border-top: 1px solid #eee;
+}
+
+.shop .goodsDetail .goodsInfo .addToShop {
+	display: block;
+	margin-top: 10px;
+	padding: 6px 12px;
+	background: #01aa05;
+	border: 1px solid #007503;
+	border-radius: 4px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.shop .goodsDetail .goodsInfo .addToShop:hover {
+	background: #00bc06;
+	border: 1px solid #108d13;
+}
+
+.shop .goodsDetail .goodsInfo a {
+	color: #08c;
+}
+
+.shop .goodsDetail .goodsInfo a:hover {
+	text-decoration: underline;
+}
+
+.shop .goodsDetail .goodsInfo a.addButton {
+	color: #08c;
+}
+
+.shop .goodsDetail .goodsInfo a.addButton:hover {
+	text-decoration: none;
+}
+
+.shop .goodsAttached {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	background: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	border-radius: 4px;
+}
+
+.shop .goodsAttached .attachMenu {
+	padding: 7px 0;
+	background: url(bg/shadow.png) no-repeat center bottom;
+	font-size: 14px;
+	text-align: center;
+}
+
+.shop .goodsAttached .attachMenu a {
+	display: inline-block;
+	padding: 0 50px;
+	height: 36px;
+	line-height: 36px;
+	border-right: 1px solid #eee;
+}
+
+.shop .goodsAttached a {
+	color: #08c;
+}
+
+.shop .goodsAttached a em {
+	color: #999;
+}
+
+.shop .goodsAttached .shadow {
+	margin: 10px 0;
+	height: 10px;
+	background: url(bg/shadow.png) no-repeat center bottom;
+}
+
+.shop .goodsAttached h5 {
+	padding: 20px 20px 5px 20px;
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.shop .goodsAttached dl {
+	margin: 0 20px;
+	padding: 10px 0;
+	border-top: 1px solid #eee;
+	font-size: 14px;
+}
+
+.shop .goodsAttached dt {
+	float: left;
+	padding-right: 40px;
+	width: 180px;
+	font-weight: bold;
+}
+
+.shop .goodsAttached dd {
+	float: left;
+	width: 700px;
+}
+
+
 

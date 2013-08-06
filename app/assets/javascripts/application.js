@@ -13,3 +13,4 @@
 //= require jquery.min
 //= require jquery_ujs
 //= require html5
+//= require jquery.zoom-min

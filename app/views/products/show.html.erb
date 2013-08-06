@@ -1,26 +1,23 @@
-			<h3>华宇·集藏用品专门店</h3>
-			<ul class="category fix">
-				<li><a href=""><dl><dt><img src="img/temp/stamp.png"></dt><dd>集邮用品</dd></dl></a></li>
-				<li><a class="current" href=""><dl><dt><img src="img/temp/coin.png"></dt><dd>集币用品</dd></dl></a></li>
-			</ul>
+			<script type="text/javascript">
+			$(document).ready(function(){
+  $('img.zoom_image').zoom({url: 'http://localhost:4000/system/product/2013/31/10019/big/0be3e462bfa3493921af15bb81aff944.jpg'});
+});
+			</script>
 			<div class="goodsDetail fix">
 				<div class="goodsPic">
-					<table><tr><td><img src="img/temp/item_big_01.jpg" alt=""></td></tr></table>
+					<table><tr><td><%= image_tag(@product.product_picture.avatar.url(:large,false), :class => "zoom_image") %></td></tr></table>
 					<ul class="fix">
-						<li class="selected"><a href=""><img src="img/temp/item_tiny_01.jpg" alt=""></a></li>
-						<li><a href=""><img src="img/temp/item_tiny_02.jpg" alt=""></a></li>
-						<li><a href=""><img src="img/temp/item_tiny_03.jpg" alt=""></a></li>
-						<li><a href=""><img src="img/temp/item_tiny_04.jpg" alt=""></a></li>
-						<li><a href=""><img src="img/temp/item_tiny_01.jpg" alt=""></a></li>
-						<li><a href=""><img src="img/temp/item_tiny_02.jpg" alt=""></a></li>
+						<% @product.product_pictures.each do |pp| %>
+						  <li class="selected"><%= link_to image_tag(pp.avatar.url(:thumb,false)), pp.avatar.url(:thumb,false) %></li>
+						<% end %>
 					</ul>
 				</div>
 				<div class="goodsInfo">
-					<h4>适用于 MacBook Pro 的 Crumpler 13" Flock of Horror 单肩包</h4>
-					<p class="f14 red">¥ 1,900,2900.00<button class="addToShop" type="button">添加到购物车</button></p>
+					<h4><%= @product.name %></h4>
+					<p class="f14 red"><%= @product.price %><%= link_to '<button class="addToShop" type="button">添加到购物车</button>'.html_safe, carts_path(pid: @product.id, pcount: 1), method: "post", :class => "addButton" %></p>
 					<p><a href="">率先评论此产品</a></p>
 					<p>预计发货时间：24 小时内</p>
-					<p><img src="img/temp/sina.gif"></p>
+					<p><%= image_tag "temp/sina.gif" %></p>
 				</div>
 			</div>
 			<div class="goodsAttached fix">
@@ -52,7 +49,7 @@
 				<ul class="fix">
 					<li>
 						<dl>
-							<dt><a href=""><img src="img/temp/bid_item.jpg"></a></dt>
+							<dt><a href=""><%= image_tag "temp/bid_item.jpg" %></a></dt>
 							<dd>
 								<p><a href="">这里是商品名称这里是商品名称这里是商品名称这里是商品名称</a></p>
 								<p><strong>¥ 1,900,2900.00</strong></p>
@@ -62,7 +59,7 @@
 					</li>
 					<li>
 						<dl>
-							<dt><a href=""><img src="img/temp/bid_item.jpg"></a></dt>
+							<dt><a href=""><%= image_tag "temp/bid_item.jpg" %></a></dt>
 							<dd>
 								<p><a href="">这里是商品名称这里是商品名称这里是商品名称这里是商品名称</a></p>
 								<p><strong>¥ 1,900,2900.00</strong></p>
@@ -72,7 +69,7 @@
 					</li>
 					<li class="last">
 						<dl>
-							<dt><a href=""><img src="img/temp/bid_item.jpg"></a></dt>
+							<dt><a href=""><%= image_tag "temp/bid_item.jpg" %></a></dt>
 							<dd>
 								<p><a href="">这里是商品名称这里是商品名称这里是商品名称这里是商品名称</a></p>
 								<p><strong>¥ 1,900,2900.00</strong></p>
