@@ -1,14 +1,22 @@
 			<script type="text/javascript">
-			$(document).ready(function(){
-  $('img.zoom_image').zoom({url: 'http://localhost:4000/system/product/2013/31/10019/big/0be3e462bfa3493921af15bb81aff944.jpg'});
-});
+			$(function(){
+				$('.zoom_image').zoom({
+					url: $('.zoom_image').find('img:first').attr('src').replace('large','big')
+				});
+				$('.picList').on('mouseover','li',function(){
+					$(".selected").attr('class', 'noneSelect');
+					$(this).attr('class','selected');
+					$('.zoom_image').find('img:first').attr({src: $(this).find('img:first').attr('src').replace('thumb','large')});
+					$('.zoom_image').find('img:last').attr({src: $(this).find('img:first').attr('src').replace('thumb','big')});
+				});
+			});
 			</script>
 			<div class="goodsDetail fix">
 				<div class="goodsPic">
-					<table><tr><td><%= image_tag(@product.product_picture.avatar.url(:large,false), :class => "zoom_image") %></td></tr></table>
-					<ul class="fix">
-						<% @product.product_pictures.each do |pp| %>
-						  <li class="selected"><%= link_to image_tag(pp.avatar.url(:thumb,false)), pp.avatar.url(:thumb,false) %></li>
+					<table><tr><td><span class="zoom_image"><%= image_tag(@product.product_picture.avatar.url(:large,false)) %></span></td></tr></table>
+					<ul class="picList fix">
+						<% @product.product_pictures.each_with_index do |pp,index| %>
+						  <li class='<%= index == 0 ? "selected" : "noneSelect" %>'><%= link_to image_tag(pp.avatar.url(:thumb,false)), pp.avatar.url, :target => "blank", :title => "点击查看详细大图" %></li>
 						<% end %>
 					</ul>
 				</div>

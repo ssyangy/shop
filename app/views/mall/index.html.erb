@@ -5,7 +5,7 @@
 					<% index += 1%>
 					<li class='<%= index%3 == 0 ? "last" : nil %>'>
 						<dl>
-							<dt><%= link_to image_tag(product.product_picture.avatar.url(:medium,false)), product  if product.product_picture %></dt>
+							<dt><%= link_to image_tag(product.product_picture.avatar.url(:medium,false)), product, :class => "dddd" if product.product_picture %></dt>
 							<dd>
 								<p><%= link_to product.name, product %></p>
 								<p><strong><%= product.price %></strong></p>
@@ -16,3 +16,5 @@
 					<% end %>
 				</ul>
 			</div>
+
+

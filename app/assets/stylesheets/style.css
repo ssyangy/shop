@@ -840,5 +840,15 @@ main {
 	width: 700px;
 }
 
+/*放大镜*/
+.zoom_image {
+	display:inline-block;
+	position: relative;
+}
+.zoom_image img {
+	display: block;
+}
+.zoom img::selection { background-color: transparent; }
+
 
 
