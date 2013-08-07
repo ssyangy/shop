@@ -1,5 +1,10 @@
 			<div class="goodsList">
-				<h4><em>集邮用品：</em><strong>全部</strong><a href="">定位册</a><a href="">活页册</a><a href="">插册</a><a href="">护邮用品</a><a href="">镊子放大镜等工具</a></h4>
+				<h4 class="child_category" style="display:block">
+					<%= cat_title(@p_category) %>
+					<% @ch_categories.each do |c_cat| %>
+					    <%= c_cat_title(c_cat) %>
+					<% end %>
+				</h4>
 				<ul class="fix">
 					<% @products.each_with_index do |product,index| %>
 					<% index += 1%>

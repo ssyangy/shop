@@ -27,7 +27,7 @@
 				<ul class="fix">
 					<li><a href="">在线拍卖</a></li>
 					<li><a href="">现场拍卖</a></li>
-					<li class="current"><a href="">商城</a></li>
+					<li class="current"><%= link_to "商城", root_path %></li>
 					<li><a href="">求售</a></li>
 					<li><a href="">社区</a></li>
 				</ul>
@@ -52,8 +52,9 @@
 		<main class="fix">
 			<h3>华宇·集藏用品专门店</h3>
 			<ul class="category fix">
-				<li><a href=""><dl><dt><%= image_tag "temp/stamp.png" %></dt><dd>集邮用品</dd></dl></a></li>
-				<li><a href=""><dl><dt><%= image_tag "temp/coin.png" %></dt><dd>集币用品</dd></dl></a></li>
+				<% @p_categories.each do |p_cat| %>
+				  <li><a href="<%= root_path(:p1 => p_cat.id)%>" class='<%= params[:p1] == "#{p_cat.id}" ? "current" : nil %>' ><dl><dt><%= image_tag p_cat.name.include?('集邮') ? "temp/stamp.png" : "temp/coin.png" %></dt><dd><%= p_cat.name %></dd></dl></a></li>
+				<% end %>
 			</ul>
 
 			<%= yield %>
