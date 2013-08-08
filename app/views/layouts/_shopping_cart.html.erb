@@ -1,7 +1,7 @@
-            <div class="cartContent"><a href="">购物车：<strong><%= @cart.shopping_cart_items.sum(&:quantity) %></strong>件，去结算&gt;</a></div>
+            <div class="cartContent"><a href="">购物车：<strong><%= current_cart.total_unique_items %></strong>件，去结算&gt;</a></div>
 				<div class="cartList">
 					<ul>
-					<% @cart.shopping_cart_items.includes(:item).each do |cart_item| %>
+					<% current_cart.shopping_cart_items.includes(:item).each do |cart_item| %>
 						<li class="fix">
 							<figure><%= link_to image_tag(cart_item.item.product_picture.avatar.url(:medium,false)), cart_item.item if cart_item.item.product_picture %></figure>
 							<div class="info">
@@ -12,8 +12,8 @@
 					<% end %>
 					</ul>
 					<div class="summary">
-						<p>共<strong><%= @cart.shopping_cart_items.sum(&:quantity) %></strong>件商品</p>
-						<p>金额总计：<strong><%= @cart.total %></strong></p>
+						<p>共<strong><%= current_cart.total_unique_items %></strong>件商品</p>
+						<p>金额总计：<strong><%= current_cart.total %></strong></p>
 						<a href="">去购物车结算&gt;</a>
 					</div>
 				</div>
