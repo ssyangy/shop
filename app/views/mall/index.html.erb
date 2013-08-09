@@ -12,7 +12,7 @@
 						<dl>
 							<dt><%= link_to image_tag(product.product_picture.avatar.url(:medium,false)), product, :class => "dddd" if product.product_picture %></dt>
 							<dd>
-								<p><%= link_to product.name, product %></p>
+								<p><%= link_to truncate(product.name, length: 20), product, title: product.name %></p>
 								<p><strong><%= product.price %></strong></p>
 								<p class="tac"><%= link_to '<button class="addToShop" type="button">立即购买</button>'.html_safe, carts_path(pid: product.id, pcount: 1), method: "post", :class => "addButton" %></p>
 							</dd>

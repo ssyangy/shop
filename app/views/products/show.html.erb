@@ -25,7 +25,7 @@
 					<p class="f14 red"><%= @product.price %><%= link_to '<button class="addToShop" type="button">添加到购物车</button>'.html_safe, carts_path(pid: @product.id, pcount: 1), method: "post", :class => "addButton" %></p>
 					<p><a href="">率先评论此产品</a></p>
 					<p>预计发货时间：24 小时内</p>
-					<p><%= image_tag "temp/sina.gif" %></p>
+					<p><a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f='http://v.t.sina.com.cn/share/share.php?appkey=真实的appkey',u=z||d.location,p=['&url=',e(u),'&title=',e(t||d.title),'&source=',e(r),'&sourceUrl=',e(l),'&content=',c||'gb2312','&pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','','图片链接|默认为空','标题|默认当前页标题','内容链接|默认当前页location','页面编码gb2312|utf-8默认gb2312'));"><%= image_tag "temp/sina.gif" %></a></p>
 				</div>
 			</div>
 			<div class="goodsAttached fix">
@@ -33,18 +33,11 @@
 				<h5>产品信息</h5>
 				<dl class="fix">
 					<dt>概述</dt>
-					<dd>Crumpler Flock of Horror 单肩包可在任何天气条件下保持 MacBook Pro 和 iPad 的安全。这个挎包式单肩包由重型 900D 聚酯制作而成，并具备防水涂层。内部有为 13 英寸 MacBook Pro 精心设置的特殊位置以及为 iPad 设置的独立柔软衬垫口袋。 </dd>
+					<dd><%= @product.description %></dd>
 				</dl>
 				<dl class="fix">
 					<dt>亮点</dt>
-					<dd>
-						<p>四个存储区</p>
-						<p>可容纳 13 英寸 Macbook Pro</p>
-						<p>外部拉链式 iPad 袋</p>
-						<p>防水 900D 外面料</p>
-						<p>防水 iPhone 袋</p>
-						<p>可拆卸式肩垫</p>
-					</dd>
+					<dd><%= raw @product.advantage %></dd>
 				</dl>
 				<div class="shadow"></div>
 				<h5>评级与评论</h5>
