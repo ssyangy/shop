@@ -2,7 +2,9 @@ Shop::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
   resources :mall
-  resources :carts
+  resources :carts do
+    put :delete_item, :on => :collection
+  end
   resources :products
 
   # Sample of regular route:

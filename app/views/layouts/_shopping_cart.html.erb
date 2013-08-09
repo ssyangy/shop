@@ -7,6 +7,8 @@
 							<div class="info">
 								<p><%= link_to cart_item.item.name, cart_item.item %></p>
 								<p><strong><%= cart_item.item.price %></strong> x <%= cart_item.quantity %></p>
+								<p><%= link_to '删除', delete_item_carts_path(pid: cart_item.item.id, pcount: cart_item.quantity), method: "put" %></p>
+								<p><%= link_to '-1', delete_item_carts_path(pid: cart_item.item.id, pcount: 1), method: "put" %> <%= link_to '+1', carts_path(pid: cart_item.item.id, pcount: 1), method: "post" %></p>
 							</div>
 						</li>
 					<% end %>
