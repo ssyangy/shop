@@ -26,6 +26,8 @@
 					<p><a href="">率先评论此产品</a></p>
 					<p>预计发货时间：24 小时内</p>
 					<p><%= render "layouts/sina_share" %></p>
+					<p><%= link_to "解除微博绑定", unauth_sessions_path(:type => 3, :user_id => current_user.id), :method => 'put' if current_user && current_user.weibo %></p>
+					<p><%= link_to "微博登录", weibo_sessions_path, :method => 'get' unless current_user %></p>
 				</div>
 			</div>
 			<div class="goodsAttached fix">

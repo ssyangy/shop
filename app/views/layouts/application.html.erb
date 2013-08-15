@@ -32,7 +32,13 @@
 					<li><a href="">社区</a></li>
 				</ul>
 				<div id="search"><input type="search" placeholder="输入拍品编号或名称"><button type="submit">搜索</button></div>
-				<div class="link"><a href="">登录</a>&middot;<a href="">注册</a>&middot;<a href="">帮助</a></div>
+				<div class="link">
+				<% if current_user.present? %>
+					<%= session[:user_id] %> <%= current_user.try(:true_name) %> <%= link_to "退出", unauth_sessions_path(:type => 3, :user_id => current_user.id), :method => 'put' if current_user %>
+				<% else %>
+				    <a href="">登录</a>&middot;<a href="">注册</a>&middot;
+				<% end %>
+				<a href="">帮助</a></div>
 			</div>
 		</div>
 		<nav>

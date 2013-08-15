@@ -1,0 +1,13 @@
+<%= form_for @user, :html => { :multipart => true,:id => "new_and_edit_user" } do |f| %>
+  <table class="edit_form" width="50%">
+    <tr>
+      <td class="col_name"><span class='required'>*</span>姓名:</td>
+      <td><%= f.text_field :true_name %></td>
+      <td class="col_name">手机:</td>
+      <td><%= f.text_field :mobile, :size => 12 %><% if @user.new_record? %> <%= f.check_box :send_message,{:checked => true} %>短信<% end %></td>
+    </tr>
+  </table>
+  <%= f.button "保存", :class => "save_button", :style => "background-color:#FFCC66;" %>
+<% end %>
+<%= @weibo.open_user_no %>
+<%= @weibo.open_api_type %>

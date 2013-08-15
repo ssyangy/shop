@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130801080304) do
+ActiveRecord::Schema.define(:version => 20130814081448) do
 
   create_table "account_details", :force => true do |t|
     t.integer  "user_id",        :precision => 38, :scale => 0,                   :null => false
@@ -354,6 +354,16 @@ ActiveRecord::Schema.define(:version => 20130801080304) do
   add_index "auctions", ["contract_id"], :name => "index_auctions_on_contract_id"
   add_index "auctions", ["particular_topic_id"], :name => "index_auctions_on_pts_id"
   add_index "auctions", ["status"], :name => "index_auctions_on_status"
+
+  create_table "authorizations", :force => true do |t|
+    t.string   "uid"
+    t.string   "provider"
+    t.integer  "user_id",      :precision => 38, :scale => 0
+    t.string   "access_token"
+    t.datetime "expires_at"
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+  end
 
   create_table "authors", :force => true do |t|
     t.string "name"
@@ -1695,6 +1705,19 @@ ActiveRecord::Schema.define(:version => 20130801080304) do
     t.datetime "updated_at"
   end
 
+  create_table "product_pictures", :force => true do |t|
+    t.integer  "product_id",          :precision => 38, :scale => 0,                :null => false
+    t.string   "base_url"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size",    :precision => 38, :scale => 0
+    t.boolean  "avatar_processing",   :precision => 1,  :scale => 0
+    t.string   "upload_by"
+    t.integer  "position",            :precision => 38, :scale => 0, :default => 0, :null => false
+    t.datetime "created_at",                                                        :null => false
+    t.datetime "updated_at",                                                        :null => false
+  end
+
   create_table "products", :force => true do |t|
     t.string   "name",                                                            :null => false
     t.string   "barcode"
@@ -1705,6 +1728,7 @@ ActiveRecord::Schema.define(:version => 20130801080304) do
     t.datetime "created_at",                                                      :null => false
     t.datetime "updated_at",                                                      :null => false
     t.decimal  "price",         :precision => 12, :scale => 2, :default => 0.0,   :null => false
+    t.string   "advantage"
   end
 
   create_table "provinces", :force => true do |t|

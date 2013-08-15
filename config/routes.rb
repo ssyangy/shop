@@ -6,6 +6,12 @@ Shop::Application.routes.draw do
     put :delete_item, :on => :collection
   end
   resources :products
+  match "/auth/:provider/callback" => "sessions#auth"
+  resources :sessions do
+    put :unauth, :on => :collection
+    get :weibo, :on => :collection
+  end
+  resources :users
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
