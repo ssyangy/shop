@@ -2,11 +2,11 @@
 class SessionsController < ApplicationController
 
 	def weibo
-        session[:oauth_state] = SecureRandom.hex(16)
+        session['omniauth.state'] = SecureRandom.hex(16)
         options = {
             client_id: 600434063,
             redirect_uri: "http://127.0.0.1:4000/auth/weibo/callback",
-            state: session[:oauth_state],
+            state: session['omniauth.state'],
         }
         authorize_url = "https://api.weibo.com/oauth2/authorize?#{options.map{|k, v|"#{CGI::escape(k.to_s)}=#{CGI::escape(v.to_s)}"}.join('&')}"
 
