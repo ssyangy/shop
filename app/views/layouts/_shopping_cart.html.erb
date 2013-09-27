@@ -16,6 +16,6 @@
 					<div class="summary">
 						<p>共<strong><%= current_cart.total_unique_items %></strong>件商品</p>
 						<p>金额总计：<strong><%= current_cart.subtotal %></strong></p>
-						<a href="">去购物车结算&gt;</a>
+						<%= link_to "去购物车结算", carts_path %>
 					</div>
 				</div>

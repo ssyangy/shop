@@ -49,23 +49,7 @@
 			</div>
 		</nav>
 	</header>
-	<div class="all">
-		<div class="fr">
-			<div class="shoppingCart">
-				<%= render "layouts/shopping_cart" %>
-			</div>
-		</div>
-		<main class="fix">
-			<h3>华宇·集藏用品专门店</h3>
-			<ul class="category fix">
-				<% @p_categories.each do |p_cat| %>
-				  <li><a href="<%= root_path(:p1 => p_cat.id)%>" class='<%= params[:p1] == "#{p_cat.id}" ? "current" : nil %>' ><dl><dt><%= image_tag p_cat.name.include?('集邮') ? "temp/stamp.png" : "temp/coin.png" %></dt><dd><%= p_cat.name %></dd></dl></a></li>
-				<% end %>
-			</ul>
-
-			<%= yield %>
-		</main>
-	</div>
+	  <%= yield %>
 	<footer>
 		<div class="all">
 			<p class="link"><a href="">关于我们</a><a href="">业务团队</a><a href="">诚聘英才</a><a href="">联系我们</a><a href="">交通指南</a><a href="">帮助中心</a><a href="">友情链接</a></p>

@@ -1,3 +1,16 @@
+	<div class="all">
+		<div class="fr">
+			<div class="shoppingCart">
+				<%= render "layouts/shopping_cart" %>
+			</div>
+		</div>
+		<main class="fix">
+			<h3>华宇·集藏用品专门店</h3>
+			<ul class="category fix">
+				<% @p_categories.each do |p_cat| %>
+				  <li><a href="<%= root_path(:p1 => p_cat.id)%>" class='<%= params[:p1] == "#{p_cat.id}" ? "current" : nil %>' ><dl><dt><%= image_tag p_cat.name.include?('集邮') ? "temp/stamp.png" : "temp/coin.png" %></dt><dd><%= p_cat.name %></dd></dl></a></li>
+				<% end %>
+			</ul>
 			<script type="text/javascript">
 			$(function(){
 				$('.zoom_image').zoom({
@@ -13,7 +26,7 @@
 			</script>
 			<div class="goodsDetail fix">
 				<div class="goodsPic">
-					<table><tr><td><span class="zoom_image"><%= image_tag(@product.product_picture.avatar.url(:large,false)) %></span></td></tr></table>
+					<table><tr><td><span class="zoom_image"><%= image_tag('rails.png') %></span></td></tr></table>
 					<ul class="picList fix">
 						<% @product.product_pictures.each_with_index do |pp,index| %>
 						  <li class='<%= index == 0 ? "selected" : "noneSelect" %>'><%= link_to image_tag(pp.avatar.url(:thumb,false)), pp.avatar.url, :target => "blank", :title => "点击查看详细大图" %></li>
@@ -82,5 +95,7 @@
 					</li>
 				</ul>
 			</div>
+		</main>
+	</div>
 		</main>
 	</div>

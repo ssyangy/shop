@@ -1,0 +1,27 @@
+<div class="all">
+		<main class="fix">
+			<ul class="cartNav fix">
+				<li class="current">购物车</li>
+				<li>支付</li>
+				<li class="lastMargin">发货</li>
+			</ul>
+			<div class="cartDetail fix">
+				<h4>您的购物车中的商品</h4>
+				<ul>
+					<% current_cart.shopping_cart_items.includes(:item).each do |cart_item| %>
+					<li class="fix">
+						<figure><%= link_to image_tag(cart_item.item.product_picture.avatar.url(:medium,false)), cart_item.item if cart_item.item.product_picture %></figure>
+						<div>
+							<h5><%= link_to '删除', delete_item_carts_path(pid: cart_item.item.id, pcount: cart_item.quantity), method: "put" %><%= cart_item.item.name %></h5>
+							<p><span><em>单价：</em><%= cart_item.item.price %></span><span><em>数量：</em><input type="number" value="<%= cart_item.quantity %>"></span><span><em>合计：</em>¥ <%= cart_item.subtotal %></span><span><em>节省：</em>0</span></p>
+						</div>
+					</li>
+					<% end %>
+				</ul>
+				<div class="total">
+					<p>总计：<strong>¥ <%= current_cart.subtotal %></strong> 元，便宜 <strong>¥ 0</strong> 元</p>
+					<p><button type="button">OK，下订单</button></p>
+				</div>
+			</div>
+		</main>
+	</div>

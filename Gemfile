@@ -18,8 +18,9 @@ gem "delayed_job_active_record", "0.3.3"
 gem "delayed_job", '3.0.4' #,  :git => 'git://github.com/collectiveidea/delayed_job.git'PStore.new("file_name.pstore")
 gem 'delayed_paperclip', '2.5.0.1'
 
-gem "omniauth", '1.1.1'
-gem 'omniauth-weibo-oauth2', '0.2.0'
+gem "omniauth", '1.1.4'
+gem "omniauth-oauth2", '1.1.1'
+gem 'omniauth-weibo-oauth2', '0.3.0'
 
 
 # Gems used only for assets and not required

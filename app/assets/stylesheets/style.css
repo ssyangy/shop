@@ -769,14 +769,6 @@ main {
 	text-decoration: underline;
 }
 
-.shop .goodsDetail .goodsInfo a.addButton {
-	color: #08c;
-}
-
-.shop .goodsDetail .goodsInfo a.addButton:hover {
-	text-decoration: none;
-}
-
 .shop .goodsAttached {
 	margin-bottom: 10px;
 	padding-bottom: 20px;
@@ -840,15 +832,127 @@ main {
 	width: 700px;
 }
 
-/*放大镜*/
+.shop .cartNav {
+	margin-bottom: 10px;
+}
+
+.shop .cartNav li {
+	float: left;
+	margin-right: 10px;
+	padding: 5px 0;
+	width: 318px;
+	background: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	border: 1px solid #fff;
+	border-radius: 4px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.shop .cartNav li.current {
+	background: #01aa05;
+	border: 1px solid #007503;
+	color: #fff;
+}
+
+.shop .cartDetail {
+	margin-bottom: 10px;
+	background: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	border-radius: 4px;
+}
+
+.shop .cartDetail h4 {
+	padding: 10px 20px;
+	font-size: 20px;
+	border-bottom: 1px solid #d5d5d5;
+}
+
+.shop .cartDetail ul {
+	padding: 0 20px;
+}
+
+.shop .cartDetail li {
+	padding: 20px 0;
+	border-bottom: 1px solid #d5d5d5;
+}
+
+.shop .cartDetail li figure {
+	float: left;
+	width: 180px;
+	text-align: center;
+}
+
+.shop .cartDetail li div {
+	float: left;
+	width: 760px;
+}
+
+.shop .cartDetail li div h5 {
+	position: relative;
+	margin-bottom: 20px;
+	padding: 5px 50px 5px 0;
+	border-bottom: 1px solid #d5d5d5;
+	font-size: 16px;
+}
+
+.shop .cartDetail li div h5 a {
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #08c;
+}
+
+.shop .cartDetail li div p span {
+	display: inline-block;
+	width: 190px;
+}
+
+.shop .cartDetail li div p em {
+	color: #999;
+}
+
+.shop .cartDetail li div p input {
+	width: 60px;
+	text-align: center;
+}
+
+.shop .cartDetail .total {
+	padding: 20px;
+}
+
+.shop .cartDetail .total p {
+	padding-bottom: 15px;
+	font-size: 14px;
+	text-align: right;
+}
+
+.shop .cartDetail .total p strong {
+	color: #c90000;
+}
+
+.shop .cartDetail .total button {
+	padding: 6px 12px;
+	background: #01aa05;
+	border: 1px solid #007503;
+	border-radius: 4px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.shop .cartDetail .total button:hover {
+	background: #00bc06;
+	border: 1px solid #108d13;
+}
+
 .zoom_image {
 	display:inline-block;
-	position: relative;
 }
 .zoom_image img {
 	display: block;
 }
 .zoom img::selection { background-color: transparent; }
-
-
 

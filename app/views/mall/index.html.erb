@@ -1,3 +1,16 @@
+	<div class="all">
+		<div class="fr">
+			<div class="shoppingCart">
+				<%= render "layouts/shopping_cart" %>
+			</div>
+		</div>
+		<main class="fix">
+			<h3>华宇·集藏用品专门店</h3>
+			<ul class="category fix">
+				<% @p_categories.each do |p_cat| %>
+				  <li><a href="<%= root_path(:p1 => p_cat.id)%>" class='<%= params[:p1] == "#{p_cat.id}" ? "current" : nil %>' ><dl><dt><%= image_tag p_cat.name.include?('集邮') ? "temp/stamp.png" : "temp/coin.png" %></dt><dd><%= p_cat.name %></dd></dl></a></li>
+				<% end %>
+			</ul>
 			<div class="goodsList">
 				<h4 class="child_category" style="display:block">
 					<%= cat_title(@p_category) %>
@@ -22,5 +35,7 @@
 					<% end %>
 				</ul>
 			</div>
+		</main>
+	</div>
 
 

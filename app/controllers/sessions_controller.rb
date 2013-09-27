@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
         options = {
             client_id: 600434063,
             redirect_uri: "http://127.0.0.1:4000/auth/weibo/callback",
-            state: session['omniauth.state'],
+            state: session['omniauth.state']
         }
         authorize_url = "https://api.weibo.com/oauth2/authorize?#{options.map{|k, v|"#{CGI::escape(k.to_s)}=#{CGI::escape(v.to_s)}"}.join('&')}"
 
@@ -30,31 +30,6 @@ class SessionsController < ApplicationController
 			@weibo.save
 			@user = User.new
 		end
-=begin		
-		if current_user.present? && current_user.authorization.blank?
-			auth = current_user.authorizations.build
-			auth.uid = omniauth[:uid] 
-			auth.provider=omniauth[:provider] 
-			auth.access_token = omniauth[:credentials][:token] 
-			auth.expires_at = Time.now + omniauth[:credentials][:expires_at]
-			auth.save
-		elsif Authorization.where(:uid => omniauth[:uid], :provider => omniauth[:provider]).first
-			session[:user_id] = Authorization.where(:uid => omniauth[:uid], :provider => omniauth[:provider]).first.user.id
-		elsif current_user.blank? && Authorization.where(:uid => omniauth[:uid], :provider => omniauth[:provider]).blank?
-			user = User.new
-			user.true_name = omniauth[:info][:name]
-			user.register_type = 3
-			user.crypted_password = Digest::MD5.hexdigest('user.true_name')
-			auth = user.authorizations.build 
-			auth.uid = omniauth[:uid] 
-			auth.provider=omniauth[:provider] 
-			auth.access_token = omniauth[:credentials][:token] 
-			auth.expires_at = Time.now + omniauth[:credentials][:expires_at]
-			user.save && auth.save
-			session[:user_id] = user.id
-		end
-		redirect_to root_path
-=end		
 	end
 
 	def unauth
